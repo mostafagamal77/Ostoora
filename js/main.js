@@ -5,7 +5,8 @@ const scrollTop = document.querySelector(".scroll-top"),
   navLinks = document.querySelectorAll(".nav-links li a"),
   playVideoBtns = document.querySelectorAll(".play-video"),
   closeVideoBtn = document.querySelector(".close-video"),
-  iframeVideo = document.querySelector(".video-iframe");
+  iframeContainer = document.querySelector(".video-iframe"),
+  iframeVideo = document.querySelector(".video-iframe iframe");
 
 /*---------- Start Scroll Top ----------*/
 window.onscroll = () => {
@@ -82,29 +83,29 @@ const servicesSlider = new Swiper(".slide-content", {
 // ========== End Services slider ==========
 // ========== Start Works slider ==========
 const worksSlider = new Swiper(".works-content", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
   loop: true,
-  grabCursor: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false
-  },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".works-pagination",
     clickable: true,
     dynamicBullets: true
   },
-
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
   breakpoints: {
     0: {
+      slidesPerView: 0.5
+    },
+    767: {
       slidesPerView: 1
     },
-    600: {
-      slidesPerView: 2
-    },
     992: {
-      slidesPerView: 3
+      slidesPerView: 1.5
+    },
+    1200: {
+      slidesPerView: 2
     }
   }
 });
@@ -174,11 +175,14 @@ const videosSlider = new Swiper(".videos-slider", {
 // open video on page when press play
 playVideoBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    iframeVideo.classList.remove("d-none");
-    iframeVideo.classList.add("d-flex");
+    let videoSrc = btn.parentElement.previousElementSibling.dataset.src;
+    iframeVideo.setAttribute("src", videoSrc);
+    iframeContainer.classList.remove("d-none");
+    iframeContainer.classList.add("d-flex");
   });
 });
 closeVideoBtn.addEventListener("click", () => {
-  iframeVideo.classList.add("d-none");
+  iframeVideo.setAttribute("src", "");
+  iframeContainer.classList.add("d-none");
 });
 // ========== End Videos ==========

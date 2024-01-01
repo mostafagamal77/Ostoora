@@ -290,7 +290,7 @@ main {
   & .works-slider {
     max-width: 1120px;
     width: 100%;
-    padding: 40px 0;
+    padding: 50px 0;
 
     & .works-content {
       overflow: hidden;
@@ -364,6 +364,19 @@ main {
       width: 12px;
       height: 12px;
     }
+    & .work-next::after,
+      & .work-prev::after {
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--main-color);
+      }
+
+      & .work-next {
+        right: 0;
+      }
+      & .work-prev {
+        left: 0;
+      }
   }
   & .dots {
     bottom: 10px;
