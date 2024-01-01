@@ -21,36 +21,38 @@
           <a href="#" class="logo">
             <img class="img-fluid" src="imgs/logo.png" alt="page-logo" />
           </a>
+
           <ul
-            class="nav-links d-flex d-flex justify-content-between align-items-center gap-2 gap-lg-5"
+            class="nav-links d-none d-md-flex d-flex justify-content-between align-items-center gap-2 gap-lg-4"
           >
             <li>
-              <a href="#"
-                ><i class="fa-brands fa-facebook-f"></i>
-                <span class="d-none d-md-block">FaceBook</span></a
-              >
+              <a href="#home" class="active">Home</a>
             </li>
             <li>
-              <a href="#"
-                ><i class="fa-brands fa-instagram"></i
-                ><span class="d-none d-md-block">Instagram</span>
-              </a>
+              <a href="#services">Our Services </a>
             </li>
             <li>
-              <a href="#"
-                ><i class="fa-brands fa-tiktok"></i>
-                <span class="d-none d-md-block">Tiktok</span>
-              </a>
+              <a href="#blog">Blog </a>
             </li>
             <li>
-              <a href="#"
-                ><i class="fa-brands fa-twitter"></i>
-                <span class="d-none d-md-block">Twitter</span>
-              </a>
+              <a href="#daily">Daily Stories </a>
+            </li>
+            <li>
+              <a href="#review">Clients Review </a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us </a>
             </li>
           </ul>
-          <div class="language fw-bold fs-5">
-            <i class="fa-regular fa-globe"></i> AR
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn menu-toggler d-md-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="language fw-bold fs-5">
+              <i class="fa-regular fa-globe"></i> AR
+            </div>
           </div>
         </nav>
       </div>
@@ -66,36 +68,53 @@
       <!-- ==========End Scroll Top========== -->
 
       <!-- ========== Start Landing ========== -->
-      <section
-        class="pt-5 pb-5 position-relative landing d-flex flex-column align-items-center"
-      >
-        <h2 class="heading text-center text-capitalize text-light my-5 fw-bold">
-          Alostoora Cleaning
-        </h2>
+      <section class="landing py-5" id="home">
         <div class="container">
           <div
-            class="landing-content d-flex justify-content-between align-items-center gap-3"
+            class="landing-content row align-items-center justify-content-evenly justify-content-md-between"
           >
-            <a href="#" class="phone"
-              ><i class="fa-regular fa-circle-phone-flip fa-rotate-90"></i
-            ></a>
-            <div class="slider-container">
-              <div class="landing-slider swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="imgs/landing1.jpg" alt="" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="imgs/landing2.png" alt="" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="imgs/work1.png" alt="" />
+            <div class="col-1 p-0">
+              <a href="#" class="phone p-2 p-md-4"
+                ><i class="fa-regular fa-circle-phone-flip fa-rotate-90"></i
+              ></a>
+            </div>
+            <div class="col-6 p-0">
+              <div class="slider-container">
+                <div class="landing-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <h2
+                        class="heading text-center text-capitalize text-light my-3 my-md-4 fw-bold"
+                      >
+                        Alostoora Cleaning
+                      </h2>
+                      <img
+                        class="img-fluid"
+                        src="imgs/landing1.jpg"
+                        alt="landing image"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <h2
+                        class="heading text-center text-capitalize text-light my-3 my-md-4 fw-bold"
+                      >
+                        ostoora deep Cleaning
+                      </h2>
+                      <img
+                        class="img-fluid"
+                        src="imgs/landing2.png"
+                        alt="landing image"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <a href="#" class="whats"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="col-1 p-0">
+              <a href="#" class="whats p-2 p-md-4"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
           </div>
         </div>
         <div class="dots"><img src="imgs/dots.png" alt="dots" /></div>
@@ -106,45 +125,88 @@
       <!-- ========== End Landing ========== -->
 
       <!-- ========== Start Services ========== -->
-      <section class="services pb-5 position-relative">
+      <section class="services pb-5 position-relative" id="services">
         <div class="container">
           <div class="services-slider swiper">
             <div class="slide-content">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
+                    <img
+                      loading="lazy"
+                      class="img-fluid"
+                      src="imgs/broom.png"
+                      alt=" services image"
+                    />
                   </div>
+                  <p class="text-capitalize fw-bold text-light">
+                    play demo for courses
+                  </p>
                 </div>
                 <div class="swiper-slide">
                   <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
+                    <img
+                      loading="lazy"
+                      class="img-fluid"
+                      src="imgs/broom.png"
+                      alt=" services image"
+                    />
                   </div>
+                  <p class="text-capitalize fw-bold text-light">
+                    best educators
+                  </p>
                 </div>
                 <div class="swiper-slide">
                   <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
+                    <img
+                      loading="lazy"
+                      class="img-fluid"
+                      src="imgs/broom.png"
+                      alt=" services image"
+                    />
                   </div>
+                  <p class="text-capitalize fw-bold text-light">
+                    build your career
+                  </p>
                 </div>
                 <div class="swiper-slide">
                   <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
+                    <img
+                      loading="lazy"
+                      class="img-fluid"
+                      src="imgs/broom.png"
+                      alt=" services image"
+                    />
                   </div>
+                  <p class="text-capitalize fw-bold text-light">
+                    play demo for courses
+                  </p>
                 </div>
                 <div class="swiper-slide">
                   <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
+                    <img
+                      loading="lazy"
+                      class="img-fluid"
+                      src="imgs/broom.png"
+                      alt=" services image"
+                    />
                   </div>
+                  <p class="text-capitalize fw-bold text-light">
+                    best educators
+                  </p>
                 </div>
                 <div class="swiper-slide">
                   <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
+                    <img
+                      loading="lazy"
+                      class="img-fluid"
+                      src="imgs/broom.png"
+                      alt=" services image"
+                    />
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img class="img-fluid" src="imgs/broom.png" alt="" />
-                  </div>
+                  <p class="text-capitalize fw-bold text-light">
+                    build your career
+                  </p>
                 </div>
               </div>
             </div>
@@ -152,12 +214,15 @@
             <div class="swiper-button-prev services-prev"></div>
           </div>
         </div>
-        <div class="dots-lg"><img src="imgs/dotslg.png" alt="" /></div>
+        <div class="dots-lg">
+          <img loading="lazy" src="imgs/dotslg.png" alt="dots" />
+        </div>
       </section>
+
       <!-- ========== End Services ========== -->
 
       <!-- ========== Start Work ========== -->
-      <section class="pb-5 position-relative works">
+      <section class="pb-5 position-relative works" id="blog">
         <h2 class="heading text-center text-capitalize text-light my-5 fw-bold">
           our work
         </h2>
@@ -173,6 +238,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work1.png"
                         class="card-img-top"
                         alt="card image"
@@ -194,6 +260,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work2.png"
                         class="card-img-top"
                         alt="card image"
@@ -215,6 +282,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work3.png"
                         class="card-img-top"
                         alt="card image"
@@ -236,6 +304,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work4.png"
                         class="card-img-top"
                         alt="card image"
@@ -257,6 +326,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work5.png"
                         class="card-img-top"
                         alt="card image"
@@ -278,6 +348,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work6.png"
                         class="card-img-top"
                         alt="card image"
@@ -299,6 +370,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work1.png"
                         class="card-img-top"
                         alt="card image"
@@ -320,6 +392,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work2.png"
                         class="card-img-top"
                         alt="card image"
@@ -341,6 +414,7 @@
                   <div class="swiper-slide">
                     <div class="card rounded-4">
                       <img
+                        loading="lazy"
                         src="imgs/work3.png"
                         class="card-img-top"
                         alt="card image"
@@ -365,15 +439,18 @@
             </div>
           </div>
         </div>
-        <div class="dots"><img src="imgs/dots.png" alt="dots" /></div>
+        <div class="dots">
+          <img loading="lazy" src="imgs/dots.png" alt="dots" />
+        </div>
       </section>
       <!-- ========== End Work ========== -->
 
       <!-- ========== Start News ========== -->
-      <section class="news py-5 position-relative">
+      <section class="news py-5 position-relative" id="daily">
         <div class="container">
           <div class="news-head text-light fw-bold fs-3 mb-5">
             <img
+              loading="lazy"
               class="me-2 img-fluid"
               src="imgs/daily stories.png"
               alt="daily news"
@@ -386,6 +463,7 @@
                 <div class="swiper-slide news-card">
                   <a href="#">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="imgs/news.png"
                       alt="news image"
@@ -395,6 +473,7 @@
                 <div class="swiper-slide news-card">
                   <a href="#">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="imgs/news.png"
                       alt="news image"
@@ -404,6 +483,7 @@
                 <div class="swiper-slide news-card">
                   <a href="#">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="imgs/news.png"
                       alt="news image"
@@ -413,6 +493,7 @@
                 <div class="swiper-slide news-card">
                   <a href="#">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="imgs/news.png"
                       alt="news image"
@@ -422,6 +503,7 @@
                 <div class="swiper-slide news-card">
                   <a href="#">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="imgs/news.png"
                       alt="news image"
@@ -431,6 +513,7 @@
                 <div class="swiper-slide news-card">
                   <a href="#">
                     <img
+                      loading="lazy"
                       class="img-fluid"
                       src="imgs/news.png"
                       alt="news image"
@@ -441,12 +524,14 @@
             </div>
           </div>
         </div>
-        <div class="dots-lg"><img src="imgs/dotslg.png" alt="" /></div>
+        <div class="dots-lg">
+          <img loading="lazy" src="imgs/dotslg.png" alt="" />
+        </div>
       </section>
       <!-- ========== End News ========== -->
 
       <!-- ========== Start Feedback ========== -->
-      <section class="py-5 position-relative feedback">
+      <section class="py-5 position-relative feedback" id="review">
         <h2 class="heading text-center text-capitalize text-light fw-bold">
           our clients feedback
         </h2>
@@ -457,6 +542,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -481,6 +567,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -505,6 +592,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -529,6 +617,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -553,6 +642,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -577,6 +667,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -601,6 +692,7 @@
                 <div class="swiper-slide">
                   <div class="card">
                     <img
+                      loading="lazy"
                       src="imgs/feedback.png"
                       class="card-img-top"
                       alt="..."
@@ -627,7 +719,7 @@
           </div>
         </div>
         <div class="dots">
-          <img src="imgs/dots.png" alt="dots" />
+          <img loading="lazy" src="imgs/dots.png" alt="dots" />
         </div>
       </section>
       <!-- ========== End Feedback ========== -->
@@ -643,100 +735,52 @@
                     <div class="row row-gap-4">
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
                       </div>
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
                       </div>
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
                       </div>
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
-                            <i class="fa-duotone fa-play"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="row row-gap-4">
-                      <div class="col-6 position-relative vid-card">
-                        <img
-                          class="img-fluid"
-                          src="imgs/feedback.png"
-                          alt="video image"
-                        />
-                        <div class="video-overlay">
-                          <button class="btn">
-                            <i class="fa-duotone fa-play"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-6 position-relative vid-card">
-                        <img
-                          class="img-fluid"
-                          src="imgs/feedback.png"
-                          alt="video image"
-                        />
-                        <div class="video-overlay">
-                          <button class="btn">
-                            <i class="fa-duotone fa-play"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-6 position-relative vid-card">
-                        <img
-                          class="img-fluid"
-                          src="imgs/feedback.png"
-                          alt="video image"
-                        />
-                        <div class="video-overlay">
-                          <button class="btn">
-                            <i class="fa-duotone fa-play"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="col-6 position-relative vid-card">
-                        <img
-                          class="img-fluid"
-                          src="imgs/feedback.png"
-                          alt="video image"
-                        />
-                        <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
@@ -747,48 +791,108 @@
                     <div class="row row-gap-4">
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
                       </div>
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
                       </div>
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
                       </div>
                       <div class="col-6 position-relative vid-card">
                         <img
+                          loading="lazy"
                           class="img-fluid"
                           src="imgs/feedback.png"
                           alt="video image"
                         />
                         <div class="video-overlay">
-                          <button class="btn">
+                          <button class="btn play-video">
+                            <i class="fa-duotone fa-play"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="row row-gap-4">
+                      <div class="col-6 position-relative vid-card">
+                        <img
+                          loading="lazy"
+                          class="img-fluid"
+                          src="imgs/feedback.png"
+                          alt="video image"
+                        />
+                        <div class="video-overlay">
+                          <button class="btn play-video">
+                            <i class="fa-duotone fa-play"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-6 position-relative vid-card">
+                        <img
+                          loading="lazy"
+                          class="img-fluid"
+                          src="imgs/feedback.png"
+                          alt="video image"
+                        />
+                        <div class="video-overlay">
+                          <button class="btn play-video">
+                            <i class="fa-duotone fa-play"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-6 position-relative vid-card">
+                        <img
+                          loading="lazy"
+                          class="img-fluid"
+                          src="imgs/feedback.png"
+                          alt="video image"
+                        />
+                        <div class="video-overlay">
+                          <button class="btn play-video">
+                            <i class="fa-duotone fa-play"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="col-6 position-relative vid-card">
+                        <img
+                          loading="lazy"
+                          class="img-fluid"
+                          src="imgs/feedback.png"
+                          alt="video image"
+                        />
+                        <div class="video-overlay">
+                          <button class="btn play-video">
                             <i class="fa-duotone fa-play"></i>
                           </button>
                         </div>
@@ -801,13 +905,30 @@
               <div class="swiper-button-prev video-prev"></div>
             </div>
           </div>
+          <div class="video-iframe d-none">
+            <div class="position-relative">
+              <button class="btn text-light fs-2 close-video">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <iframe
+                loading="lazy"
+                src="https://www.youtube.com/embed/668nUCeBHyY"
+                title="Nature Beautiful short video 720p HD"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
-        <div class="dots"><img src="imgs/dots.png" alt="dots image" /></div>
+        <div class="dots">
+          <img loading="lazy" src="imgs/dots.png" alt="dots image" />
+        </div>
       </section>
       <!-- ========== End Videos ========== -->
 
       <!-- ========== Start Form ========== -->
-      <section class="contact py-3">
+      <section class="contact py-3" id="contact">
         <div class="container">
           <h2 class="fw-bold text-capitalize mb-3">send message to us</h2>
           <form action="" class="form">
@@ -829,7 +950,7 @@
             <input
               type="submit"
               value="Send"
-              class="btn fw-medium main-btn submit"
+              class="btn rounded-pill fw-medium main-btn submit"
             />
           </form>
         </div>
@@ -844,7 +965,7 @@
           >
             <div class="text">
               <h2 class="text-capitalize fw-bold">visit our website now!</h2>
-              <p class="fw-bold fs-4 text-capitalize">know more about us</p>
+              <p class="fw-bold fs-5 text-capitalize">know more about us</p>
             </div>
             <a href="#" class="btn main-btn fw-medium">Visit Our Website</a>
           </div>

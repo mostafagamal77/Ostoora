@@ -1,6 +1,11 @@
 // Selection of Elements
-const videoBtns = document.querySelectorAll(".video-overlay button"),
-  scrollTop = document.querySelector(".scroll-top");
+const scrollTop = document.querySelector(".scroll-top"),
+  menuToggler = document.querySelector(".menu-toggler"),
+  navMenu = document.querySelector(".nav-links"),
+  navLinks = document.querySelectorAll(".nav-links li a"),
+  playVideoBtns = document.querySelectorAll(".play-video"),
+  closeVideoBtn = document.querySelector(".close-video"),
+  iframeVideo = document.querySelector(".video-iframe");
 
 /*---------- Start Scroll Top ----------*/
 window.onscroll = () => {
@@ -19,10 +24,31 @@ window.onscroll = () => {
 };
 /*---------- End Scroll Top ----------*/
 
+/*---------- Start Menu toggle ----------*/
+menuToggler.addEventListener("click", () => {
+  navMenu.classList.toggle("toggle-menu");
+});
+/*---------- End Menu toggle ----------*/
+/*---------- Start links active toggle ----------*/
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((l) => {
+      l.classList.remove("active");
+      link.classList.add("active");
+    });
+  });
+});
+function activeToggle(navLinks) {
+  navLinks.forEach((l) => {
+    l.classList.remove("active");
+    link.classList.add("active");
+  });
+}
+/*---------- End links active toggle ----------*/
+
 // ========== Start landing Automated Slider  ==========
 const landingSlider = new Swiper(".landing-slider", {
-  spaceBetween: 30,
-  effect: "fade",
+  spaceBetween: 10,
   centeredSlides: true,
   autoplay: {
     delay: 3000,
@@ -34,7 +60,7 @@ const landingSlider = new Swiper(".landing-slider", {
 // ========== Start Services slider ==========
 const servicesSlider = new Swiper(".slide-content", {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: 20,
   grabCursor: true,
   loop: true,
   navigation: {
@@ -48,7 +74,7 @@ const servicesSlider = new Swiper(".slide-content", {
     550: {
       slidesPerView: 2
     },
-    1200: {
+    900: {
       slidesPerView: 3
     }
   }
@@ -146,9 +172,13 @@ const videosSlider = new Swiper(".videos-slider", {
 });
 
 // open video on page when press play
-videoBtns.forEach((btn) => {
+playVideoBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    // let video =
+    iframeVideo.classList.remove("d-none");
+    iframeVideo.classList.add("d-flex");
   });
+});
+closeVideoBtn.addEventListener("click", () => {
+  iframeVideo.classList.add("d-none");
 });
 // ========== End Videos ==========
