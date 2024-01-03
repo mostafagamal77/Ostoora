@@ -1,12 +1,15 @@
 // Selection of Elements
 const scrollTop = document.querySelector(".scroll-top"),
   menuToggler = document.querySelector(".menu-toggler"),
+  langBtn = document.querySelector(".language"),
+  lang = document.querySelector(".language span"),
   navMenu = document.querySelector(".nav-links"),
   navLinks = document.querySelectorAll(".nav-links li a"),
-  playVideoBtns = document.querySelectorAll(".play-video"),
-  closeVideoBtn = document.querySelector(".close-video"),
-  iframeContainer = document.querySelector(".video-iframe"),
-  iframeVideo = document.querySelector(".video-iframe iframe");
+  reels = document.querySelectorAll(".reel");
+(playVideoBtns = document.querySelectorAll(".play-video")),
+  (closeVideoBtn = document.querySelector(".close-video")),
+  (iframeContainer = document.querySelector(".video-iframe")),
+  (iframeVideo = document.querySelector(".video-iframe iframe"));
 
 /*---------- Start Scroll Top ----------*/
 window.onscroll = () => {
@@ -39,13 +42,49 @@ navLinks.forEach((link) => {
     });
   });
 });
-function activeToggle(navLinks) {
-  navLinks.forEach((l) => {
-    l.classList.remove("active");
-    link.classList.add("active");
-  });
-}
 /*---------- End links active toggle ----------*/
+
+/*---------- Start Language toggle----------*/
+window.onload = () => {
+  if (localStorage.getItem("dir") == "rtl") {
+    arDir();
+  } else {
+    enDir();
+  }
+};
+langBtn.addEventListener("click", () => {
+  if (document.body.getAttribute("dir")) {
+    enDir();
+  } else {
+    arDir();
+  }
+});
+
+function arDir() {
+  document.body.setAttribute("dir", "rtl");
+  document.querySelectorAll(".swiper").forEach((slider) => {
+    slider.setAttribute("dir", "ltr");
+  });
+  document.querySelectorAll(".input-label").forEach((label) => {
+    label.classList.add("ar");
+  });
+  menuToggler.setAttribute("dir", "ltr");
+  lang.innerHTML = "EN";
+  localStorage.setItem("dir", "rtl");
+}
+function enDir() {
+  document.body.removeAttribute("dir");
+  document.querySelectorAll(".swiper").forEach((slider) => {
+    slider.removeAttribute("dir");
+  });
+  document.querySelectorAll(".input-label").forEach((label) => {
+    label.classList.remove("ar");
+  });
+  menuToggler.setAttribute("dir", "rtl");
+  lang.innerHTML = "AR";
+  localStorage.removeItem("dir");
+}
+/*---------- End Language toggle----------*/
 
 // ========== Start landing Automated Slider  ==========
 const landingSlider = new Swiper(".landing-slider", {
@@ -70,25 +109,20 @@ const servicesSlider = new Swiper(".slide-content", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1
-    },
-    550: {
-      slidesPerView: 2
-    },
-    900: {
-      slidesPerView: 3
+      spaceBetween: 10
     }
   }
 });
 // ========== End Services slider ==========
 // ========== Start Works slider ==========
-const worksSlider = new Swiper(".works-content", {
-  spaceBetween: 20,
-  loop: true,
+
+const worksSlider = new Swiper(".workSwiper", {
+  slidesPerView: 1.75,
+  spaceBetween: 30,
+  keyboard: { enabled: true },
   pagination: {
     el: ".works-pagination",
-    clickable: true,
-    dynamicBullets: true
+    clickable: true
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -96,41 +130,42 @@ const worksSlider = new Swiper(".works-content", {
   },
   breakpoints: {
     0: {
-      slidesPerView: 0.5
+      slidesPerView: 1,
+      centeredSlides: false,
+      grid: {
+        rows: 2
+      }
     },
     767: {
-      slidesPerView: 1
-    },
-    992: {
-      slidesPerView: 1.5
-    },
-    1200: {
-      slidesPerView: 2
+      slidesPerView: 1.75,
+      centeredSlides: true,
+      grid: {
+        rows: 2
+      }
     }
   }
 });
-
 // ========== End Works slider ==========
 
 // ========== Start News slider ==========
+
+reels.forEach((reel) => {
+  reel.addEventListener("click", () => {
+    let videoSrc = reel.dataset.reel;
+    iframeVideo.setAttribute("src", videoSrc);
+    iframeContainer.classList.remove("d-none");
+    iframeContainer.classList.add("d-flex");
+  });
+});
+
 const newsSlider = new Swiper(".news-slider", {
+  slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
   grabCursor: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 2
-    },
-    600: {
-      slidesPerView: 3
-    },
-    992: {
-      slidesPerView: 4
-    }
   }
 });
 // ========== End News slider ==========
@@ -155,8 +190,9 @@ const feedbackSlider = new Swiper(".feedback-slider", {
 // ========== Start Videos ==========
 // Slider
 const videosSlider = new Swiper(".videos-slider", {
-  slidesPerView: 2,
-  spaceBetween: 20,
+  // slidesPerView: 2,
+  // spaceBetween: 20,
+  centeredSlides: true,
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -167,12 +203,12 @@ const videosSlider = new Swiper(".videos-slider", {
       slidesPerView: 1
     },
     992: {
-      slidesPerView: 2
+      slidesPerView: 1
     }
   }
 });
 
-// open video on page when press play
+// open video in iframe
 playVideoBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let videoSrc = btn.parentElement.previousElementSibling.dataset.src;
@@ -181,6 +217,7 @@ playVideoBtns.forEach((btn) => {
     iframeContainer.classList.add("d-flex");
   });
 });
+
 closeVideoBtn.addEventListener("click", () => {
   iframeVideo.setAttribute("src", "");
   iframeContainer.classList.add("d-none");
