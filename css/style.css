@@ -24,8 +24,10 @@
 }
 html {
   scroll-behavior: smooth;
+  position: relative;
 }
 body {
+  position: relative;
   font-family: "Poppins", sans-serif;
   background-image: var(--gradient-color);
 }
@@ -303,69 +305,56 @@ main {
 
 /* ========== Start Works ========== */
 .works {
-  & .works-slider {
-    max-width: 1120px;
-    width: 100%;
+  .works-content {
+    overflow: hidden;
+    /* margin: 0 8rem; */
+  }
+  .workSwiper {
+    /* max-width: 3000px;
+    width: 100%; */
     padding: 50px 0;
-
-    & .works-content {
-      padding: 10px 0;
-      margin: 0 50px;
-    }
-    @media (max-width: 767px) {
-      & .works-content {
-        margin: 0 30px;
-      }
-    }
-    & .swiper-slide {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      & .card {
-        background-image: linear-gradient(50deg, #5d4b23 10%, #897c49 80%);
-        box-shadow: 9px 9px 15px rgba(255, 255, 255, 39%);
-        position: relative;
-        transition: var(--transition);
-        -webkit-transition: var(--transition);
-        -moz-transition: var(--transition);
-        -ms-transition: var(--transition);
-        -o-transition: var(--transition);
-        @media (max-width: 767px) {
-          & .card-body {
-            & p {
-              font-size: 13px;
+    padding: 0 5rem 0 9rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+    .swiper-wrapper {
+      .swiper-slide {
+        font-size: 18px;
+        background: transparent;
+        max-width: 700px;
+        width: 100%;
+        padding: 20px;
+        margin: 10px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .card {
+          background-image: linear-gradient(50deg, #5d4b23 10%, #897c49 80%);
+          box-shadow: 5px 5px 8px var(--shadow-color);
+          position: relative;
+          overflow: hidden;
+          transition: var(--transition);
+          -webkit-transition: var(--transition);
+          -moz-transition: var(--transition);
+          -ms-transition: var(--transition);
+          -o-transition: var(--transition);
+          @media (max-width: 767px) {
+            .card-body {
+              p {
+                font-size: 13px;
+              }
             }
           }
         }
-      }
-
-      .card-overlay {
-        position: absolute;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        transition: var(--transition);
-        -webkit-transition: var(--transition);
-        -moz-transition: var(--transition);
-        -ms-transition: var(--transition);
-        -o-transition: var(--transition);
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-        & a {
+        .card-overlay {
+          position: absolute;
+          bottom: -200%;
+          left: 0;
+          width: 100%;
+          height: 0;
+          background-color: rgba(0, 0, 0, 0.5);
           display: flex;
-          background-color: var(--main-color);
-          color: var(--text-color);
-          font-size: 18px;
-          padding: 15px;
-          cursor: pointer;
+          align-items: center;
+          justify-content: center;
           border-radius: 10px;
           transition: var(--transition);
           -webkit-transition: var(--transition);
@@ -376,98 +365,13 @@ main {
           -moz-border-radius: 10px;
           -ms-border-radius: 10px;
           -o-border-radius: 10px;
-        }
-        & a:hover {
-          border: 1px solid var(--main-color);
-          background-color: transparent;
-        }
-      }
-      & .card:hover {
-        box-shadow: 10px 10px 20px var(--shadow-color);
-        & .card-overlay {
-          bottom: 0;
-          height: 100%;
-        }
-      }
-    }
-    & .swiper-pagination-bullet {
-      background-color: white;
-      width: 10px;
-      height: 10px;
-    }
-    & .swiper-pagination-bullet-active {
-      background-color: var(--main-color);
-      width: 12px;
-      height: 12px;
-    }
-    & .work-next::after,
-    & .work-prev::after {
-      font-size: 30px;
-      font-weight: bold;
-      color: var(--main-color);
-    }
-
-    & .work-next {
-      right: 0;
-    }
-    & .work-prev {
-      left: 0;
-    }
-  }
-  & .dots {
-    bottom: 10px;
-    left: 10px;
-  }
-}
-
-.works {
-  .content {
-    margin: 0 50px;
-    .workSwiper {
-      max-width: 1120px;
-      width: 100%;
-      padding: 50px 0;
-      margin-left: auto;
-      margin-right: auto;
-      .swiper-wrapper {
-        .swiper-slide {
-          font-size: 18px;
-          background: transparent;
-          max-width: 650px;
-          width: 100%;
-          padding: 20px;
-          margin: 10px !important;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .card {
-            background-image: linear-gradient(50deg, #5d4b23 10%, #897c49 80%);
-            box-shadow: 5px 5px 8px var(--shadow-color);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-            -webkit-transition: var(--transition);
-            -moz-transition: var(--transition);
-            -ms-transition: var(--transition);
-            -o-transition: var(--transition);
-            @media (max-width: 767px) {
-              .card-body {
-                p {
-                  font-size: 13px;
-                }
-              }
-            }
-          }
-          .card-overlay {
-            position: absolute;
-            bottom: -200%;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+          & a {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: var(--main-color);
+            color: var(--text-color);
+            font-size: 18px;
+            padding: 15px;
+            cursor: pointer;
             border-radius: 10px;
             transition: var(--transition);
             -webkit-transition: var(--transition);
@@ -478,61 +382,25 @@ main {
             -moz-border-radius: 10px;
             -ms-border-radius: 10px;
             -o-border-radius: 10px;
-            & a {
-              display: flex;
-              background-color: var(--main-color);
-              color: var(--text-color);
-              font-size: 18px;
-              padding: 15px;
-              cursor: pointer;
-              border-radius: 10px;
-              transition: var(--transition);
-              -webkit-transition: var(--transition);
-              -moz-transition: var(--transition);
-              -ms-transition: var(--transition);
-              -o-transition: var(--transition);
-              -webkit-border-radius: 10px;
-              -moz-border-radius: 10px;
-              -ms-border-radius: 10px;
-              -o-border-radius: 10px;
-            }
-            & a:hover {
-              border: 1px solid var(--main-color);
-              background-color: transparent;
-            }
           }
-          .card:hover {
-            box-shadow: 10px 10px 20px var(--shadow-color);
-            .card-overlay {
-              bottom: 0;
-              height: 100%;
-            }
+          & a:hover {
+            border: 1px solid var(--main-color);
+            background-color: transparent;
+          }
+        }
+        .card:hover {
+          box-shadow: 10px 10px 20px var(--shadow-color);
+          .card-overlay {
+            bottom: 0;
+            height: 100%;
           }
         }
       }
-      & .swiper-pagination-bullet {
-        background-color: white;
-        width: 10px;
-        height: 10px;
-      }
-      & .swiper-pagination-bullet-active {
-        background-color: var(--main-color);
-        width: 12px;
-        height: 12px;
-      }
-      & .work-next::after,
-      & .work-prev::after {
-        font-size: 30px;
-        font-weight: bold;
-        color: var(--main-color);
-      }
-
-      & .work-next {
-        right: 0;
-      }
-      & .work-prev {
-        left: 0;
-      }
+    }
+  }
+  @media (max-width: 767px) {
+    .workSwiper {
+      padding: 0 20px;
     }
   }
 }
@@ -594,7 +462,7 @@ main {
       & .videos-slider {
         overflow: hidden;
         margin: 0 50px;
-        max-width: 900px;
+        max-width: 1000px;
 
         & .vid-card {
           overflow: hidden;
@@ -640,6 +508,11 @@ main {
           }
         }
       }
+      @media (max-width: 767px) {
+        & .videos-slider {
+          margin: 0 20px;
+        }
+      }
       & .video-next::after,
       & .video-prev::after {
         font-size: 30px;
@@ -683,7 +556,7 @@ main {
       border: none;
       border-top: 2px solid var(--main-color);
       width: 100%;
-      padding: 10px 0 10px 6rem;
+      padding: 10px 6rem 10px 6rem;
     }
     & textarea {
       padding: 10px;

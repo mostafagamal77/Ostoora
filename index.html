@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,8 +50,9 @@
               <span></span>
               <span></span>
             </button>
-            <button class="btn text-light language fw-bold fs-5">
-              <i class="fa-regular fa-globe"></i> <span>AR</span>
+            <button data-lang="" class="btn text-light language fw-bold fs-5">
+              <i class="fa-regular fa-globe"></i>
+              <span class="text-uppercase">AR</span>
             </button>
           </div>
         </nav>
@@ -74,44 +75,25 @@
             class="landing-content row align-items-center justify-content-evenly justify-content-md-between"
           >
             <div class="col-1 p-0">
-              <a href="#" class="phone p-2 p-md-4"
+              <a
+                href="tel:201020089126"
+                target="_blank"
+                class="phone p-2 p-md-4"
                 ><i class="fa-regular fa-circle-phone-flip fa-rotate-90"></i
               ></a>
             </div>
             <div class="col-6 p-0">
               <div class="slider-container">
                 <div class="landing-slider swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <h2
-                        class="heading text-center text-capitalize text-light my-3 my-md-4 fw-bold"
-                      >
-                        Alostoora Cleaning
-                      </h2>
-                      <img
-                        class="img-fluid"
-                        src="imgs/landing1.jpg"
-                        alt="landing image"
-                      />
-                    </div>
-                    <div class="swiper-slide">
-                      <h2
-                        class="heading text-center text-capitalize text-light my-3 my-md-4 fw-bold"
-                      >
-                        ostoora deep Cleaning
-                      </h2>
-                      <img
-                        class="img-fluid"
-                        src="imgs/landing2.png"
-                        alt="landing image"
-                      />
-                    </div>
-                  </div>
+                  <div class="swiper-wrapper landing-slides"></div>
                 </div>
               </div>
             </div>
             <div class="col-1 p-0">
-              <a href="#" class="whats p-2 p-md-4"
+              <a
+                href="http://wa.me/+201020089126"
+                target="_blank"
+                class="whats p-2 p-md-4"
                 ><i class="fa-brands fa-whatsapp"></i
               ></a>
             </div>
@@ -129,86 +111,7 @@
         <div class="container">
           <div class="services-slider swiper">
             <div class="slide-content">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img
-                      loading="lazy"
-                      class="img-fluid"
-                      src="imgs/broom.png"
-                      alt=" services image"
-                    />
-                  </div>
-                  <p class="text-capitalize fw-bold text-light">
-                    play demo for courses
-                  </p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img
-                      loading="lazy"
-                      class="img-fluid"
-                      src="imgs/broom.png"
-                      alt=" services image"
-                    />
-                  </div>
-                  <p class="text-capitalize fw-bold text-light">
-                    best educators
-                  </p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img
-                      loading="lazy"
-                      class="img-fluid"
-                      src="imgs/broom.png"
-                      alt=" services image"
-                    />
-                  </div>
-                  <p class="text-capitalize fw-bold text-light">
-                    build your career
-                  </p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img
-                      loading="lazy"
-                      class="img-fluid"
-                      src="imgs/broom.png"
-                      alt=" services image"
-                    />
-                  </div>
-                  <p class="text-capitalize fw-bold text-light">
-                    play demo for courses
-                  </p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img
-                      loading="lazy"
-                      class="img-fluid"
-                      src="imgs/broom.png"
-                      alt=" services image"
-                    />
-                  </div>
-                  <p class="text-capitalize fw-bold text-light">
-                    best educators
-                  </p>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-content">
-                    <img
-                      loading="lazy"
-                      class="img-fluid"
-                      src="imgs/broom.png"
-                      alt=" services image"
-                    />
-                  </div>
-                  <p class="text-capitalize fw-bold text-light">
-                    build your career
-                  </p>
-                </div>
-              </div>
+              <div class="swiper-wrapper services-slides"></div>
             </div>
             <div class="swiper-button-next services-next"></div>
             <div class="swiper-button-prev services-prev"></div>
@@ -223,182 +126,18 @@
 
       <!-- ========== Start Work ========== -->
       <section class="pb-5 position-relative works" id="blog">
-        <h2 class="heading text-center text-capitalize text-light my-5 fw-bold">
-          our work
-        </h2>
-
-        <div class="content">
-          <div class="swiper workSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work1.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work2.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work3.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work4.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work5.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work1.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work2.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card rounded-4">
-                  <img
-                    loading="lazy"
-                    src="imgs/work3.png"
-                    class="card-img-top"
-                    alt="card image"
-                  />
-                  <div class="card-body text-center text-light pt-4">
-                    <h5 class="card-title text-capitalize  pb-2">cleaning</h5>
-                    <p class="card-text">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit
-                      Lorem ipsum dolor sit, amet. 
-                    </p>
-                  </div>
-                  <div class="card-overlay">
-                    <a href="#"><i class="fa-duotone fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              
+        <h2
+          class="heading text-center text-capitalize text-light my-5 fw-bold"
+        ></h2>
+        <p class="works-subtitle text-center text-light fw-medium fs-3"></p>
+        <div class="container">
+          <div class="works-content">
+            <div class="swiper workSwiper">
+              <div class="swiper-wrapper works-slides"></div>
             </div>
-            <div class="swiper-pagination works-pagination"></div>
-            <div class="swiper-button-next work-next"></div>
-            <div class="swiper-button-prev work-prev"></div>
           </div>
         </div>
 
-        
         <div class="dots">
           <img loading="lazy" src="imgs/dots.png" alt="dots" />
         </div>
@@ -415,13 +154,16 @@
               src="imgs/daily stories.png"
               alt="daily news"
             />
-            Daily News:
+            <span class="head">Daily News:</span>
           </div>
           <div class="news-content mb-4">
             <div class="swiper news-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide news-card">
-                  <div class="reel" data-reel="https://www.youtube.com/embed/668nUCeBHyY">
+                  <div
+                    class="reel"
+                    data-reel="https://www.youtube.com/embed/668nUCeBHyY"
+                  >
                     <img
                       loading="lazy"
                       class="img-fluid"
@@ -431,7 +173,10 @@
                   </div>
                 </div>
                 <div class="swiper-slide news-card">
-                  <div class="reel" data-reel="https://www.youtube.com/embed/z326fHt6w9g">
+                  <div
+                    class="reel"
+                    data-reel="https://www.youtube.com/embed/z326fHt6w9g"
+                  >
                     <img
                       loading="lazy"
                       class="img-fluid"
@@ -441,7 +186,10 @@
                   </div>
                 </div>
                 <div class="swiper-slide news-card">
-                  <div class="reel" data-reel="https://www.youtube.com/embed/FbH2Gclbk6U">
+                  <div
+                    class="reel"
+                    data-reel="https://www.youtube.com/embed/FbH2Gclbk6U"
+                  >
                     <img
                       loading="lazy"
                       class="img-fluid"
@@ -451,7 +199,10 @@
                   </div>
                 </div>
                 <div class="swiper-slide news-card">
-                  <div class="reel" data-reel="https://www.youtube.com/embed/668nUCeBHyY">
+                  <div
+                    class="reel"
+                    data-reel="https://www.youtube.com/embed/668nUCeBHyY"
+                  >
                     <img
                       loading="lazy"
                       class="img-fluid"
@@ -461,7 +212,10 @@
                   </div>
                 </div>
                 <div class="swiper-slide news-card">
-                  <div class="reel" data-reel="https://www.youtube.com/embed/z326fHt6w9g">
+                  <div
+                    class="reel"
+                    data-reel="https://www.youtube.com/embed/z326fHt6w9g"
+                  >
                     <img
                       loading="lazy"
                       class="img-fluid"
@@ -471,7 +225,10 @@
                   </div>
                 </div>
                 <div class="swiper-slide news-card">
-                  <div class="reel" data-reel="https://www.youtube.com/embed/FbH2Gclbk6U">
+                  <div
+                    class="reel"
+                    data-reel="https://www.youtube.com/embed/FbH2Gclbk6U"
+                  >
                     <img
                       loading="lazy"
                       class="img-fluid"
@@ -915,18 +672,18 @@
       <!-- ========== Start Form ========== -->
       <section class="contact py-3" id="contact">
         <div class="container">
-          <h2 class="fw-bold text-capitalize mb-3">send message to us</h2>
-          <form action="" class="form">
+          <h2 class="fw-bold text-capitalize mb-3 head">send message to us</h2>
+          <form class="form">
             <div class="input-content">
-              <label class=" input-label" for="name">Name :</label>
+              <label class="input-label name" for="username">Name :</label>
               <input type="text" id="username" />
             </div>
             <div class="input-content">
-              <label class="input-label" for="name">Phone :</label>
+              <label class="input-label phone" for="phone">Phone :</label>
               <input type="text" id="phone" />
             </div>
             <div class="input-content">
-              <label class="input-label" for="name">E-mail :</label>
+              <label class="input-label email" for="email">E-mail :</label>
               <input type="email" id="email" />
             </div>
             <div class="input-content">
@@ -952,7 +709,12 @@
               <h2 class="text-capitalize fw-bold">visit our website now!</h2>
               <p class="fw-bold fs-5 text-capitalize">know more about us</p>
             </div>
-            <a href="#" class="btn main-btn fw-medium">Visit Our Website</a>
+            <a
+              href="#"
+              target="_blank"
+              class="btn main-btn fw-medium text-capitalize"
+              >Visit Our Website</a
+            >
           </div>
         </div>
       </section>
@@ -968,10 +730,18 @@
         <div
           class="icons d-flex justify-content-center align-items-center gap-2"
         >
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a target="_blank" href="https://www.facebook.com/darshgemy"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/mustafa.gamal/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/mustafa.gamal/"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          <a target="_blank" href="https://twitter.com/gemy7030"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
         </div>
       </div>
     </footer>
